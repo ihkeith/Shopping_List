@@ -86,7 +86,6 @@ def loadList():
 
 # Main Loop for the Application
 def main():
-    clearScreen()
     showHelp()
     while True:
         newItem = input(">>>  ")
