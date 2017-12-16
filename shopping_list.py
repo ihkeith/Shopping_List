@@ -13,6 +13,7 @@ def showHelp():
     print("Enter SHOW to see the current list")
     print("Enter LOAD to load the previous list")
     print("Enter SAVE to save the current list")
+    print("Enter CLEAR to clear the list")
     print("Enter DONE to exit the program")
 
 
@@ -29,9 +30,10 @@ def showList():
 
     print("-" * 15)
 
+
 def addItem(newItem):
     clearScreen()
-
+    
     if len(shopping_list): # if there is something in the shopping list
         position = input("Where should I add {}? \n"
                 "Press ENTER to add to the end of the list\n"
@@ -43,6 +45,7 @@ def addItem(newItem):
         position = abs(int(position))
     except ValueError:
         position = None
+
     if position is not None:
         shopping_list.insert(position-1, newItem)
     else:
@@ -50,6 +53,7 @@ def addItem(newItem):
     
     showList()
     print("{} was added to the list.".format(newItem))
+
 
 def removeItem():
     showList()
@@ -79,9 +83,13 @@ def loadList():
     for item in file:
        shopping_list.append(item)
     
-    # I need a validation to prevent adding duplicate items!
-
     showList()
+
+
+def clearList():
+    shopping_list.clear()
+    showList()
+    print("The list was cleared")
 
 
 # Main Loop for the Application
@@ -106,8 +114,10 @@ def main():
         elif newItem.upper() == 'REMOVE':
             removeItem()
             continue
+        elif newItem.upper() == 'CLEAR':
+            clearList()
+            continue
         addItem(newItem)
-    
     showList()
 
 
