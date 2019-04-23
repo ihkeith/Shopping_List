@@ -2,7 +2,7 @@
 
 ## Background
 
-I am currently working through Team Treehouses' [Learn Python](https://teamtreehouse.com/tracks/learn-python) track. I've been gone through it before, then had to step away for a bit, promptly forgetting most of what I learned, then coming back. This time, I am determined to make it stick. One of the ways they help you do this is by giving you coding projects and suggestions on how to extend the application on your own. This is my version of their command line shopping list application.
+I am currently working through Team Treehouse's [Learn Python](https://teamtreehouse.com/tracks/learn-python) track. I've been gone through it before, then had to step away for a bit, promptly forgetting most of what I learned, then coming back. This time, I am determined to make it stick. One of the ways they help you do this is by giving you coding projects and suggestions on how to extend the application on your own. This is my version of their command line shopping list application.
 
 ## Application Overview
 
