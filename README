@@ -4,10 +4,6 @@
 
 I am currently working through Team Treehouses' [Learn Python](https://teamtreehouse.com/tracks/learn-python) track. I've been gone through it before, then had to step away for a bit, promptly forgetting most of what I learned, then coming back. This time, I am determined to make it stick. One of the ways they help you do this is by giving you coding projects and suggestions on how to extend the application on your own. This is my version of their command line shopping list application.
 
-### Link to the project in GitHub
-
-[Shopping List Application](https://github.com/ihkeith/Shopping_List)
-
 ## Application Overview
 
 The shopping list app presents the user with a simple menu of choices. The user types a command to execute the command or an item to add to the list. In my extension, they have the option to save their list to a text file in the same directory as the application or to load the previous list. I may use change it to save data using Python's shelve module.
@@ -16,7 +12,7 @@ The shopping list app presents the user with a simple menu of choices. The user 
 
 Here is the code as they implemented it. It started out simply and in each subsequent video, we learned new concepts and then implemented them in the code to extend the application. They often mentioned a topic, then gave us a chance to research it and implement it on our own before going over how they did it in the video.
 
-	:::python
+	```python
 
 	import os
 
@@ -88,7 +84,7 @@ Here is the code as they implemented it. It started out simply and in each subse
 	        add_to_list(new_item)
 
 	show_list()
-
+```
 ## My Code
 
 And here is my code.  
@@ -194,7 +190,6 @@ def loadList():
     # I need a validation to prevent adding duplicate items!
 
     showList()
-
 
 # Main Loop for the Application
 def main():
