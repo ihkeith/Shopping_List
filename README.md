@@ -88,8 +88,6 @@ show_list()
 
 ## My Code
 
-And here is my code.  
-
 ### Things that I did differently
 
 * Wrapped the main loop into its own function
@@ -110,7 +108,6 @@ import os
 
 # Make a list to hold our items
 shopping_list = []
-
 
 # Funtion Definitions
 def showHelp():
@@ -139,14 +136,12 @@ def showList():
 
 def addItem(newItem):
     clearScreen()
-
     if len(shopping_list): # if there is something in the shopping list
         position = input("Where should I add {}? \n"
                 "Press ENTER to add to the end of the list\n"
                 ">>> ".format(newItem))
     else:
         position = 0
-
     try:
         position = abs(int(position))
     except ValueError:
@@ -162,16 +157,13 @@ def addItem(newItem):
 
 def removeItem():
     showList()
-
     removed_item = input("What would you like to remove?\n"
             ">>> ")
     try:
         shopping_list.remove(removed_item)
     except ValueError:
         pass
-
     showList()
-
     print("{} was successfully removed from the list.".format(removed_item))
 
 
@@ -180,7 +172,6 @@ def saveList():
     for item in shopping_list:
         file.write(item + '\n')
     print("Your list was sucessfully saved.")
-
     file.close()
 
 
@@ -188,9 +179,7 @@ def loadList():
     file = open('shopping_list.txt', 'r', newline='\r\n').read().splitlines()
     for item in file:
        shopping_list.append(item)
-
-    # I need a validation to prevent adding duplicate items!
-
+    # TODO: I need a validation to prevent adding duplicate items!
     showList()
 
 # Main Loop for the Application
@@ -216,7 +205,6 @@ def main():
             removeItem()
             continue
         addItem(newItem)
-
     showList()
 
 
